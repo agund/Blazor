@@ -1,4 +1,8 @@
-Blazor Hybrid\obj\
-Blazor Hybrid\bin\
-Blazor Native\MyApp\MyApp\obj\
-Blazor Native\MyApp\MyApp\bin\
+Blazor Hybrid/obj/
+Blazor Hybrid/bin/
+Blazor Native/MyApp/MyApp/obj/
+Blazor Native/MyApp/MyApp/bin/
+Blazor Hybrid/bin/
+Blazor Native/MyApp/MyApp.Android/obj/
+Blazor Native/MyApp/MyApp.iOS/obj/
+Blazor Native/MyApp/MyApp.Android/bin/

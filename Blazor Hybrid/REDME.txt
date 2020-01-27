@@ -1,0 +1,2 @@
+https://github.com/CloudNimble/ElectronNET.Blazor/
+https://jimbuck.io/building-desktop-apps-with-blazor/

@@ -1,0 +1,62 @@
+﻿@using System.IO
+@using System.Runtime.CompilerServices
+@using Plugin.Media
+@using Plugin.Media.Abstractions
+@using Image = Microsoft.MobileBlazorBindings.Elements.Image
+@using Microsoft.MobileBlazorBindings.Elements;
+
+@inherits VHalloWorld
+
+<Microsoft.MobileBlazorBindings.Elements.ContentPage>
+    <Microsoft.MobileBlazorBindings.Elements.ScrollView>
+        <Microsoft.MobileBlazorBindings.Elements.StackLayout Margin="new Thickness(10)">
+
+            <Microsoft.MobileBlazorBindings.Elements.Label FontSize="20" Text="@path"></Microsoft.MobileBlazorBindings.Elements.Label>
+
+            <Microsoft.MobileBlazorBindings.Elements.Label FontSize="40" Text="Test app"></Microsoft.MobileBlazorBindings.Elements.Label>
+            <Microsoft.MobileBlazorBindings.Elements.Button Text="Foto ziehen" OnClick="@GetFoto"></Microsoft.MobileBlazorBindings.Elements.Button>
+            <Microsoft.MobileBlazorBindings.Elements.Button Text="Foto machen" OnClick="@CreateFoto"></Microsoft.MobileBlazorBindings.Elements.Button>
+            <Microsoft.MobileBlazorBindings.Elements.Button Text="Alle Fotos" OnClick="@GetFotos"></Microsoft.MobileBlazorBindings.Elements.Button>
+            <Microsoft.MobileBlazorBindings.Elements.Button Text="Alle Fotos löschen" OnClick="@DeleteAll" ></Microsoft.MobileBlazorBindings.Elements.Button>
+            @if (fotoliste.Count > 0)
+            {
+
+                @foreach (var foto in fotoliste)
+                {
+                    <Microsoft.MobileBlazorBindings.Elements.Label Text="@foto" />
+                    <Microsoft.MobileBlazorBindings.Elements.Image Source="@foto" />
+                    <Microsoft.MobileBlazorBindings.Elements.Button Text="Löschen" OnClick="@(() => DelFile(foto))" />
+
+                }
+            }
+            @*
+
+                <Label Text="Letztes Foto"></Label>
+                @if (filename != "")
+                {
+                    <Image Source="@filename" />
+                }
+            *@
+
+                </Microsoft.MobileBlazorBindings.Elements.StackLayout>
+    </Microsoft.MobileBlazorBindings.Elements.ScrollView>
+</Microsoft.MobileBlazorBindings.Elements.ContentPage>
+
+@*
+    <ContentPage>
+        <StackLayout Margin="new Thickness(20)">
+            <Label FontSize="40"  Text="Test app"></Label>
+            <Button Text="Foto machen"   OnClick="@GoFoto"></Button>
+            @if (!KameraAktiv)
+            {
+                <Label Text="Kamera nicht aktiv"></Label>
+            }
+        </StackLayout>
+
+    </ContentPage>
+*@
+@code
+{
+
+
+}
